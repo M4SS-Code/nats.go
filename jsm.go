@@ -158,6 +158,7 @@ type StreamSource struct {
 	FilterSubject string          `json:"filter_subject,omitempty"`
 	External      *ExternalStream `json:"external,omitempty"`
 	Domain        string          `json:"-"`
+	Heartbeat     time.Duration   `json:"idle_heartbeat,omitempty"`
 }
 
 // ExternalStream allows you to qualify access to a stream source in another
